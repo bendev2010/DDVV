@@ -23,20 +23,8 @@ nav.logo {
     position: relative;
 }
 
-nav.logo img {
-    width: 50px;
-    height: 50px;
-    border: 5px solid white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 nav ul {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     list-style: none;
@@ -57,10 +45,57 @@ main {
     width: 100%;
 }
 
+section {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 85vh;
+    border-bottom: #6c00cb;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    height: 85vh;
+    width: 100%;
+    padding: 20px;
+    background-color: teal;
+}
+
+.about div {
+    background-color: white;
+    padding: 10px 30px;
+}
+
+.vision {
+    background-color: lightcoral;
+}
+
+.contact {
+    background-color: lightgoldenrodyellow;
+}
+
+
 /* Footer */
 
 footer {
     height: 100px;
     width: 100%;
     background-color: var(--primary);
+    bottom: 0;
+    z-index: 0;
 }
