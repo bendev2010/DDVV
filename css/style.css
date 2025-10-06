@@ -4,19 +4,19 @@
     font-family: sans-serif;
 }
 :root {
-    --primary: #6c00cb;
-    --bg1: rgb(53, 99, 50);
-    --bg2: rgb(212, 212, 212);
-    --bg3: #1a4c39;
+    --primary: #fcfaeb;
+    --bg: #1a4c39;
 }
 
 body {
-    background-color: var(--bg3);    
-    color: whitesmoke;
+    background-color: var(--bg);    
+   /* color: whitesmoke;*/
+    color: var(--primary);
+    scroll-behavior: smooth;
 }
 
 a {
-    color: whitesmoke;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -28,12 +28,14 @@ nav {
     align-items: center;
     gap: 50px;
     padding: 0 20px;
-    background-image: url('../assets/navbg.webp');
-    background-size: cover;
+    /*background-image: url('../assets/navbg.webp');
+    background-size: cover;*/
+    background-color: var(--primary);
 }
 
-nav.logo {
-    transform: scale(1.5);
+nav .logo {
+    height: 30vh;
+    border-radius: 50%;
 }
 /* Main Content */
 
@@ -78,7 +80,7 @@ main, section {
 
 .vision h2 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .vision p {
