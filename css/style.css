@@ -147,4 +147,14 @@ footer ul {
         gap: 20px;
         padding: 20px 0;
     }
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer ul {
+          transform: translateX(-20px);
+    }
 }
