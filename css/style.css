@@ -5,66 +5,40 @@
 }
 :root {
     --primary: #6c00cb;
-    --bg1: rgb(236, 218, 255);
-    --bg2: rgb(226, 216, 240);
+    --bg1: rgb(53, 99, 50);
+    --bg2: rgb(212, 212, 212);
+    --bg3: #1a4c39;
 }
 
 body {
-    background-color: var(--bg2);
+    background-color: var(--bg3);    
+    color: whitesmoke;
 }
 
-
-/* Header */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
 
 nav {
-    height: 15vh;
+    height: 30vh;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
     padding: 0 20px;
+    background-image: url('../assets/navbg.webp');
+    background-size: cover;
 }
 
 nav.logo {
-    grid-area: logo;
-    color: var(--primary);
+    transform: scale(1.5);
 }
-
-nav ul {
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    grid-area: links;
-}
-
-nav ul li a {
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: var(--primary);
-}
-
 /* Main Content */
 
-main {
+main, section {
     width: 100%;
-}
-
-section {
-    width: 100%;
-}
-
-.banner {
-    height: 15vh;
-    width: 100%;
-    border-bottom: #6c00cb;
-    background-color: lightgray;
-}
-
-.banner h2 {
-    text-align: center;
 }
 
 .about {
@@ -78,16 +52,27 @@ section {
 }
 
 .about div {
-    background-color: white;
+    text-align: center;
     padding: 10px 30px;
 }
 
-.about .imgdiv h3 {
-    text-align: center;
+.about div ul {
+    list-style: circle;
+    padding: 5px;
+}
+
+.about div ul li {
+    margin: 10px 0;
+}
+
+.about .imgdiv img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .vision {
-    background-color: rgba(240, 128, 128, 0.453);
     height: 30vh;
 }
 
@@ -110,16 +95,10 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: black;
     padding: 20px;
-} 
-
-footer a {
-    color: black;
-    text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-}
+} 
 
 footer ul {
     list-style: none;
@@ -127,4 +106,28 @@ footer ul {
     flex-direction: row;
     gap: 20px;
     justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        height: auto;
+    }
+
+    .about .imgdiv img {
+        width: 100%;
+        height: auto;
+    }
+
+    .vision p {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
 }
