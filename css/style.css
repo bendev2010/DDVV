@@ -85,7 +85,7 @@ main, section {
 .about .text2 {grid-area: text2;}
 
 
-.vision {
+/*.vision {
     height: 30vh;
 }
 
@@ -98,7 +98,7 @@ main, section {
     width: 50%;
     text-align: center;
     margin: 20px auto;
-}
+}*/
 
 /* Footer */
 
